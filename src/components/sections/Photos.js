@@ -51,7 +51,7 @@ const Photos = () => (
               ).node;
 
               return (
-                <div key={title} class="img_div">
+                <div key={title} className="img_div">
                   <Img fluid={img.childImageSharp.fluid} alt={title} />
                 </div>
               );
@@ -87,7 +87,7 @@ const ImagesGrid = styled.div`
   }
 
   Img, .img_div  {
-    box-shadow: 5px 5px 5px ${props => props.theme.color.grey.dark};
+    box-shadow: 3px 3px 3px ${props => props.theme.color.grey.dark};
     &:hover {
     transform: scale(1.1);
     overflow: auto;

@@ -5,8 +5,8 @@ import droneVideo from '@static/drone_video.mp4';
 
 const Header = () => (
   <HeaderWrapper>
-    <div class="bg-video">
-      <video autoPlay muted loop playsInline id="video" class="content">
+    <div className="bg-video">
+      <video autoPlay muted loop playsInline id="video" className="content">
         <source src={droneVideo} type="video/mp4" />
       </video>
     </div>
@@ -44,7 +44,7 @@ const HeaderWrapper = styled.header`
   }
 
   .text {
-    color: rgba(246, 246, 246, 0.85);
+    color: rgba(246, 246, 246, 1);
     margin: 0 auto;
     position: absolute;
     top: 20vh;
