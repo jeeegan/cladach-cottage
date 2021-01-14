@@ -40,26 +40,36 @@ const HeaderWrapper = styled.header`
     height: 100%;
     object-fit: cover;
     overflow: hidden;
+    box-shadow: 0px 1px 5px ${props => props.theme.color.grey.dark};
   }
 
   .text {
     color: rgba(246, 246, 246, 0.85);
     margin: 0 auto;
     position: absolute;
-    top: 25vh;
-    left: 25vw;
+    top: 20vh;
+    left: 20vw;
   }
 
   h1 {
-    text-shadow: 5px 5px 5px rgba(0,0,0,.25);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
     ${props => props.theme.font_size.xxlarge};
   }
 
-  @media (max-width: ${props => props.theme.screen.sm}) {
-    padding-top: 64px;
-
+  @media (max-width: ${props => props.theme.screen.md}) {
     h1 {
       ${props => props.theme.font_size.xlarge}
+    }
+
+    .text {
+      top: 15vh;
+      left: 15vw;
+    }
+  }
+
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    h1 {
+      ${props => props.theme.font_size.large}
     }
 
     .text {

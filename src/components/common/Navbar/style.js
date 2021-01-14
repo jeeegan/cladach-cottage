@@ -9,6 +9,7 @@ export const Nav = styled.nav`
   width: 100%;
   top: 0;
   z-index: 1000;
+  box-shadow: 0px 1px 5px ${props => props.theme.color.grey.dark};
 `;
 
 export const StyledContainer = styled(Container)`

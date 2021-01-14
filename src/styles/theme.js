@@ -16,6 +16,10 @@ const theme = {
       regular: '#FFFFFF',
       dark: '#F6F6F6',
     },
+    grey: {
+      light: '#D7D7D7',
+      dark: '#313131'
+    },
     black: {
       lighter: '#ABA8AF',
       light: '#564F62',

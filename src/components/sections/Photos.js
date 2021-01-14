@@ -51,9 +51,8 @@ const Photos = () => (
               ).node;
 
               return (
-                <div key={title}>
+                <div key={title} class="img_div">
                   <Img fluid={img.childImageSharp.fluid} alt={title} />
-                  <Title>{title}</Title>
                 </div>
               );
             })}
@@ -67,11 +66,12 @@ const Photos = () => (
 const ImagesGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, 250px);
-  grid-template-rows: min-content;
+  grid-template-rows: auto;
   grid-gap: 25px;
   justify-content: space-between;
   width: 100%;
   margin-top: 72px;
+  transition: all 0.2s;
 
   @media (max-width: ${props => props.theme.screen.lg}) {
     justify-content: start;
@@ -85,12 +85,17 @@ const ImagesGrid = styled.div`
   @media (max-width: ${props => props.theme.screen.xs}) {
     grid-gap: 24px;
   }
-`;
 
-
-const Title = styled.p`
-  ${props => props.theme.font_size.small};
-  color: ${props => props.theme.color.black.light};
+  Img, .img_div  {
+    box-shadow: 5px 5px 5px ${props => props.theme.color.grey.dark};
+    &:hover {
+    transform: scale(1.1);
+    overflow: auto;
+    border: 5px solid ${props => props.theme.color.primary};
+    box-shadow: none;
+  }
+  }
+  
 `;
 
 export default Photos;

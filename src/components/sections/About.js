@@ -14,7 +14,7 @@ const About = () => (
           name: { eq: "view_to_beach" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 760) {
+            fluid(maxWidth: 1000) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -25,7 +25,7 @@ const About = () => (
           name: { eq: "portnahaven" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 760) {
+            fluid(maxWidth: 1000) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -36,7 +36,7 @@ const About = () => (
           name: { eq: "log_burner" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 760) {
+            fluid(maxWidth: 1000) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -44,7 +44,7 @@ const About = () => (
       }
     `}
     render={data => (
-      <Section id="about">
+      <Section id="about" accent="secondary">
         <Container>
           <Grid>
             <div>
@@ -98,18 +98,18 @@ const About = () => (
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 2fr 3fr;
   grid-gap: 40px;
   text-align: right;
   align-items: center;
   justify-items: center;
-  margin: 24px 0;
+  margin: 60px 0;
 
   ${props =>
     props.inverse &&
     `
     text-align: left;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 3fr 2fr;
   `}
 
   h2 {
@@ -117,9 +117,9 @@ const Grid = styled.div`
   }
 
   @media (max-width: ${props => props.theme.screen.md}) {
-    grid-template-columns: 1fr;
-    text-align: left;
-    margin-bottom: 96px;
+    grid-template-columns: 2fr 3fr;
+    text-align: right;
+    margin-bottom: 60px;
 
     &:last-child {
       margin-bottom: 24px;
@@ -133,12 +133,29 @@ const Grid = styled.div`
         }
     `}
   }
+
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    grid-template-columns: 2fr;
+    text-align: left;
+    margin-bottom: 48px;
+
+    &:last-child {
+      margin-bottom: 24px;
+    }
+  }
 `;
 
 const Art = styled.figure`
   margin: 0;
-  max-width: 380px;
+  max-width: 1000px;
   width: 100%;
+  transition: all 0.2s;
+  box-shadow: 5px 5px 5px ${props => props.theme.color.grey.dark};
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 5px ${props => props.theme.color.primary};
+  }
 `;
 
 export default About;
