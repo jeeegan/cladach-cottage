@@ -1,109 +1,98 @@
 import React from 'react';
 import styled from 'styled-components';
-import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
-
-import { Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
+import droneVideo from '@static/drone_video.mp4';
 
 const Header = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        art_port_charlotte_beach: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "port_charlotte_beach" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 1400) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
-      <HeaderWrapper>
-        <Container>
-          <Grid>
-            <Art>
-              <Img
-                fluid={data.art_port_charlotte_beach.childImageSharp.fluid}
-              />
-            </Art>
-            <Text>
-              <h1>
-                Port Charlotte
-                <br />
-                Isle of Islay
-              </h1>
-              <br />
-              <p>
-                <StyledExternalLink href="#book">
-                  Book now &nbsp;&#x2794;
-                </StyledExternalLink>
-              </p>
-            </Text>
-          </Grid>
-        </Container>
-      </HeaderWrapper>
-    )}
-  />
+  <HeaderWrapper>
+    <div class="bg-video">
+      <video autoPlay muted loop id="video" class="content">
+        <source src={droneVideo} type="video/mp4" />
+      </video>
+    </div>
+    <div className="text">
+      <h1>
+        Port Charlotte,
+        <br />
+        Isle of Islay
+      </h1>
+      <br />
+      <p>
+        <StyledExternalLink href="#book">
+          Book now &nbsp;&#x2794;
+        </StyledExternalLink>
+      </p>
+    </div>
+  </HeaderWrapper>
 );
 
 const HeaderWrapper = styled.header`
-  background-color: ${props => props.theme.color.primary};
-  padding-top: 96px;
+  padding-top: 64px;
 
-  @media (max-width: ${props => props.theme.screen.md}) {
-    padding-top: 128px;
+  .bg-video {
+    height: 100%;
+    width: 100%;
+    z-index: -1;
   }
-`;
 
-const Art = styled.figure`
-  width: 100%;
-  margin: 0;
+  .content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+  }
 
-  > div {
-    width: 120%;
-    margin-bottom: -4.5%;
+  .text {
+    color: rgba(246, 246, 246, 0.85);
+    margin: 0 auto;
+    position: absolute;
+    top: 25vh;
+    left: 25vw;
+  }
 
-    @media (max-width: ${props => props.theme.screen.md}) {
-      width: 100%;
+  h1 {
+    text-shadow: 5px 5px 5px rgba(0,0,0,.25);
+    ${props => props.theme.font_size.xxlarge};
+  }
+
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    padding-top: 64px;
+
+    h1 {
+      ${props => props.theme.font_size.xlarge}
+    }
+
+    .text {
+      top: 15vh;
+      left: 15vw;
     }
   }
-`;
 
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  grid-gap: 64px;
-
-  @media (max-width: ${props => props.theme.screen.md}) {
-    grid-template-columns: 1fr;
-    grid-gap: 80px;
-
-    > ${Art} {
-      order: 2;
+  @media (max-width: ${props => props.theme.screen.xs}) {
+    h1 {
+      ${props => props.theme.font_size.large}
     }
-  }
-`;
-
-const Text = styled.div`
-  justify-self: center;
-
-  @media (max-width: ${props => props.theme.screen.md}) {
-    justify-self: start;
   }
 `;
 
 const StyledExternalLink = styled(ExternalLink)`
-  color: inherit;
+  color: rgba(246, 246, 246, 0.85);
+  text-shadow: 5px 5px 5px rgba(0,0,0,.25);
   text-decoration: none;
+  margin: 0 auto;
 
   &:hover {
     color: ${props => props.theme.color.black.regular};
+  }
+
+  ${props => props.theme.font_size.xlarge}
+
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    ${props => props.theme.font_size.large}
+  }
+
+  @media (max-width: ${props => props.theme.screen.xs}) {
+    ${props => props.theme.font_size.regular}
   }
 `;
 

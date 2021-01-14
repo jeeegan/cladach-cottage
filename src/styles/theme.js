@@ -9,6 +9,7 @@ const theme = {
     large: 'font-size: 26px; line-height: 36px',
     larger: 'font-size: 32px; line-height: 44px',
     xlarge: 'font-size: 48px; line-height: 56px',
+    xxlarge: 'font-size: 72px; line-height: 84px',
   },
   color: {
     white: {
