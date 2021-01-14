@@ -9,9 +9,9 @@ const About = () => (
   <StaticQuery
     query={graphql`
       query {
-        art_fast: file(
+        art_view_to_beach: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "fast" }
+          name: { eq: "view_to_beach" }
         ) {
           childImageSharp {
             fluid(maxWidth: 760) {
@@ -20,9 +20,9 @@ const About = () => (
           }
         }
 
-        art_learn: file(
+        art_portnahaven: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "learn_yourself" }
+          name: { eq: "portnahaven" }
         ) {
           childImageSharp {
             fluid(maxWidth: 760) {
@@ -31,9 +31,9 @@ const About = () => (
           }
         }
 
-        art_ideas: file(
+        art_log_burner: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "ideas" }
+          name: { eq: "log_burner" }
         ) {
           childImageSharp {
             fluid(maxWidth: 760) {
@@ -48,44 +48,46 @@ const About = () => (
         <Container>
           <Grid>
             <div>
-              <h2>Speed past the competition</h2>
+              <h2>Beachfront Accomodation</h2>
               <p>
-                Gatsby.js builds the fastest possible website. Instead of
-                waiting to generate pages when requested, pre-build pages and
-                lift them into a global cloud of servers — ready to be delivered
-                instantly to your users wherever they are.
+                Situated in the pictueresque conservation village of Port
+                Charlotte on The Isle of Islay - The Queen of the Hebridies.
+                This self-catering cottage is split over 2 levels with stunning
+                panaramic views of Loch Indaal.
               </p>
             </div>
             <Art>
-              <Img fluid={data.art_fast.childImageSharp.fluid} />
+              <Img fluid={data.art_view_to_beach.childImageSharp.fluid} />
             </Art>
           </Grid>
           <Grid inverse>
             <Art>
-              <Img fluid={data.art_learn.childImageSharp.fluid} />
+              <Img fluid={data.art_portnahaven.childImageSharp.fluid} />
             </Art>
             <div>
-              <h2>Nothing new to learn here</h2>
+              <h2>Explore Port Charlotte & Islay</h2>
               <p>
-                Enjoy the power of the latest web technologies – React.js ,
-                Webpack , modern JavaScript and CSS and more — all set up and
-                waiting for you to start building.
+                Port Charlotte is a perfect base from which to explore Islay,
+                and this accommodation overlooks a safe, sandy beach. Cladach
+                Cottage is near The Port Charlotte Hotel, an award winning
+                restaurant and bar offering local produce, a wide selection of
+                local malt whiskys and live music.
               </p>
             </div>
           </Grid>
           <Grid>
             <div>
-              <h2>Grow and build your ideas</h2>
+              <h2>Home from Home</h2>
               <p>
-                Waste no more time on tooling and performance. Focus on the the
-                site you want to build and nothing more.
-                <br />
-                <br />
-                Gatsby is fast in every way that matters.
+                Sleeping up to 5 people, this fully-furnished cottage has free
+                high-speed wi-fi and a kitchen with all modern appliances. Enjoy
+                the generous lounge with cozy log burner. Relax in the
+                downstairs master double bedroom. Perfect for the whole family
+                with the 3 single beds in the upstairs bedroom.
               </p>
             </div>
             <Art>
-              <Img fluid={data.art_ideas.childImageSharp.fluid} />
+              <Img fluid={data.art_log_burner.childImageSharp.fluid} />
             </Art>
           </Grid>
         </Container>

@@ -3,62 +3,78 @@ import React from 'react';
 import { Section, Container } from '@components/global';
 
 import FaqItem from '@common/FaqItem';
-import ExternalLink from '@common/ExternalLink';
 
 const FAQS = [
   {
-    title: 'What tech does Gatsby use?',
+    title: 'What facilities does the cottage have?',
     content: () => (
       <>
-        Enjoy the power of the latest web technologies – React.js , Webpack ,
-        modern JavaScript and CSS and more — all set up and waiting for you to
-        start building
+        The Cottage is split over two levels with open access to the beach front
+        and views over Loch Indaal. Internally the property comprises the
+        following:
+        <ul>
+          <li>Master double bedroom</li>
+          <li>Upstairs bedroom (3 Single beds)</li>
+          <li>Bathroom with 3 piece suite</li>
+          <li>Good sized Lounge</li>
+          <li>
+            Modern fully operational kitchen with intergrated appliances ,
+            Washer/Dryer, Fridge/Freezer, Dishwasher and Electric Hob and
+            Oven
+          </li>
+          <li>Has the ability to sleep 5 people</li>
+          <li>Free WiFi Internet Access</li>
+        </ul>
       </>
     ),
   },
   {
-    title: 'Where can you source data from?',
+    title: 'Where can I eat and drink in Port Charlotte?',
     content: () => (
       <>
-        Gatsby’s rich data plugin ecosystem lets you build sites with the data
-        you want — from one or many sources: Pull data from headless CMSs, SaaS
-        services, APIs, databases, your file system, and more directly into your
-        pages using GraphQL.
+        The village of Port Charlotte has a hotel serving restaurant and bar
+        meals, a friendly pub, a general store with Post Office and a small
+        petrol station. Lochindaal Kitchen restaurant adjacent to the cottage,
+        specialises in locally caught crab, lobster and scallops. Succulent
+        oysters, farmed in the clear waters of Loch Gruniart, can be purchased
+        at Craigens farm.
       </>
     ),
   },
   {
-    title: 'How do I scale Gatsby sites?',
+    title: 'What activities are available on Islay?',
     content: () => (
       <>
-        Gatsby.js is Internet Scale. Forget complicated deploys with databases
-        and servers and their expensive, time-consuming setup costs,
-        maintenance, and scaling fears. Gatsby.js builds your site as “static”
-        files which can be deployed easily on dozens of services.
+        Port Charlotte is a perfect base from which to explore Islay, and this
+        accommodation overlooks a safe, sandy beach. Cladach Cottage is near The
+        Port Charlotte Hotel, an award winning restaurant and bar offering local
+        produce, a wide selection of local malt whiskies and live music. Islay
+        is a place in which to relax, revive and refresh yourself. Some of
+        Islay's most popular leisure activities include...
+        <ul>
+          <li>Fishing</li>
+          <li>Walking</li>
+          <li>Cycling</li>
+          <li>Whisky Tasting & Distillery Tours</li>
+          <li>Horse Riding</li>
+          <li>Golfing + much more...</li>
+        </ul>
       </>
     ),
   },
   {
-    title: 'How does do I future-proof my website?',
+    title: 'How can I book?',
     content: () => (
       <>
-        Do not build a website with last decade’s tech. The future of the web is
-        mobile, JavaScript and APIs—the{` `}
-        <ExternalLink href="https://jamstack.org/">JAMstack</ExternalLink>.
-        Every website is a web app and every web app is a website. Gatsby.js is
-        the universal JavaScript framework you’ve been waiting for.
+        The easiest way to request to book the cottage is to fill out our <a href="#book">booking request form</a>. 
       </>
     ),
   },
   {
-    title: 'What exactly does Gatsby build?',
+    title: 'I have a question not answered here',
     content: () => (
       <>
-        Gatsby.js is a static PWA (Progressive Web App) generator. You get code
-        and data splitting out-of-the-box. Gatsby loads only the critical HTML,
-        CSS, data, and JavaScript so your site loads as fast as possible. Once
-        loaded, Gatsby prefetches resources for other pages so clicking around
-        the site feels incredibly fast.
+        If you have any other questions please <a href="malito:enquiries@cladachcottage.co.uk">send an email</a>.
       </>
     ),
   },

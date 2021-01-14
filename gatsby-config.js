@@ -17,8 +17,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `team`,
-        path: `${__dirname}/src/images/team`,
+        name: `photos`,
+        path: `${__dirname}/src/images/photos`,
       },
     },
     {
@@ -33,11 +33,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Absurd`,
-        short_name: `absurd`,
+        name: `Cladach`,
+        short_name: `cladach`,
         start_url: `/`,
-        background_color: `#8bd8ed`,
-        theme_color: `#8bd8ed`,
+        background_color: `#58c8bd`,
+        theme_color: `#58c8bd`,
         display: `minimal-ui`,
         icon: `static/favicon.svg`,
       },

@@ -10,9 +10,9 @@ const Header = () => (
   <StaticQuery
     query={graphql`
       query {
-        art_build: file(
+        art_port_charlotte_beach: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "build" }
+          name: { eq: "port_charlotte_beach" }
         ) {
           childImageSharp {
             fluid(maxWidth: 1400) {
@@ -27,20 +27,20 @@ const Header = () => (
         <Container>
           <Grid>
             <Art>
-              <Img fluid={data.art_build.childImageSharp.fluid} />
+              <Img
+                fluid={data.art_port_charlotte_beach.childImageSharp.fluid}
+              />
             </Art>
             <Text>
               <h1>
-                Fast in
+                Port Charlotte
                 <br />
-                every way
-                <br />
-                that matters
+                Isle of Islay
               </h1>
               <br />
               <p>
-                <StyledExternalLink href="https://github.com/ajayns/gatsby-absurd">
-                  Check out source &nbsp;&#x2794;
+                <StyledExternalLink href="#book">
+                  Book now &nbsp;&#x2794;
                 </StyledExternalLink>
               </p>
             </Text>

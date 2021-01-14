@@ -53,4 +53,10 @@ export const Wrapper = styled.div`
     ${props => props.theme.font_size.small};
     color: ${props => props.theme.color.black.light};
   }
+
+  a {
+    text-decoration: underline;
+    color: ${props => props.theme.color.black.regular};
+
+  }
 `;

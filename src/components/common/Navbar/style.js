@@ -65,6 +65,15 @@ export const MobileMenu = styled.div`
 export const Brand = styled.div`
   font-family: ${props => props.theme.font.primary};
   ${props => props.theme.font_size.large};
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: ${props => props.theme.color.black.regular};
+  }
+  span {
+    margin-left: 20px;
+  }
 `;
 
 export const Mobile = styled.div`
