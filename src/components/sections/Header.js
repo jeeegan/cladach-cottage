@@ -6,7 +6,7 @@ import droneVideo from '@static/drone_video.mp4';
 const Header = () => (
   <HeaderWrapper>
     <div class="bg-video">
-      <video autoPlay muted loop id="video" class="content">
+      <video autoPlay muted loop playsInline id="video" class="content">
         <source src={droneVideo} type="video/mp4" />
       </video>
     </div>
