@@ -34,7 +34,7 @@ class Navbar extends Component {
   };
 
   getNavAnchorLink = item => (
-    <AnchorLink href={`#${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
+    <AnchorLink offset={100}href={`#${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
       {item}
     </AnchorLink>
   );
@@ -45,7 +45,7 @@ class Navbar extends Component {
         items={NAV_ITEMS.map(item => item.toLowerCase())}
         currentClassName="active"
         mobile={mobile}
-        offset={-64}
+        offset={-400}
       >
         {NAV_ITEMS.map(navItem => (
           <NavItem key={navItem}>{this.getNavAnchorLink(navItem)}</NavItem>

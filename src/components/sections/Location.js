@@ -7,7 +7,6 @@ const Location = () => (
   <Section id="location" accent>
     <StyledContainer>
       <div>
-        <h3>Travelling to Cladach Cottage</h3>
         <p>Cladach Cottage is located in Port Charlotte, our postcode is PA48 7UD.</p>
         <p>
           It is essential to book all travel well in advance, please ask us for

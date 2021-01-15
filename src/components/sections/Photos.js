@@ -41,9 +41,8 @@ const Photos = () => (
       }
     `}
     render={data => (
-      <Section id="photos" accent="secondary">
-        <Container style={{ position: 'relative' }}>
-          <h1>Photos</h1>
+      <ImagesSection id="photos" accent="secondary">
+        <Container>
           <ImagesGrid>
             {PHOTOS.map(({ image, title }) => {
               const img = data.allFile.edges.find(
@@ -58,32 +57,26 @@ const Photos = () => (
             })}
           </ImagesGrid>
         </Container>
-      </Section>
+      </ImagesSection>
     )}
   />
 );
+
+const ImagesSection = styled(Section)`
+  width: 100%;
+`;
 
 const ImagesGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, 250px);
   grid-template-rows: auto;
-  grid-gap: 25px;
-  justify-content: center;
+  grid-gap: 20px;
   width: 100%;
-  margin-top: 72px;
+  justify-content: center;
   transition: all 0.2s;
 
-  @media (max-width: ${props => props.theme.screen.lg}) {
-    justify-content: start;
-  }
-
   @media (max-width: ${props => props.theme.screen.md}) {
-    width: 100%;
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  }
-
-  @media (max-width: ${props => props.theme.screen.xs}) {
-    grid-gap: 24px;
   }
 
   img,
