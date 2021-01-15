@@ -10,6 +10,9 @@ export const Nav = styled.nav`
   top: 0;
   z-index: 1000;
   box-shadow: 0px 1px 5px ${props => props.theme.color.grey.dark};
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    padding: 8px 0;
+  }
 `;
 
 export const StyledContainer = styled(Container)`
@@ -59,7 +62,7 @@ export const NavItem = styled.li`
   }
 
   &:hover {
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   }
 `;
 

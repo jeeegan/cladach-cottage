@@ -58,7 +58,9 @@ const HeaderWrapper = styled.header`
   }
 
   @media (max-width: ${props => props.theme.screen.md}) {
+    padding-top: 90px;
     h1 {
+      padding-top: 80px;
       ${props => props.theme.font_size.xlarge}
     }
 
@@ -69,7 +71,9 @@ const HeaderWrapper = styled.header`
   }
 
   @media (max-width: ${props => props.theme.screen.sm}) {
+    padding-top: 90px;
     h1 {
+      padding-top: 0;
       ${props => props.theme.font_size.large}
     }
 

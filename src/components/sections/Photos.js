@@ -68,7 +68,7 @@ const ImagesGrid = styled.div`
   grid-template-columns: repeat(auto-fill, 250px);
   grid-template-rows: auto;
   grid-gap: 25px;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   margin-top: 72px;
   transition: all 0.2s;
