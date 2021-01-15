@@ -54,18 +54,24 @@ export const NavItem = styled.li`
   &.active {
     a {
       opacity: 1;
+      color: ${props => props.theme.color.grey.dark};
     }
+  }
+
+  &:hover {
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
   }
 `;
 
 export const MobileMenu = styled.div`
   width: 100%;
-  background: ${props => props.theme.color.primary};
+  background-color: ${props => props.theme.color.primary};
 `;
 
 export const Brand = styled.div`
   font-family: ${props => props.theme.font.primary};
-  ${props => props.theme.font_size.logo};
+  ${props => props.theme.font_size.xlarge};
+  animation: moveInTop 2s;
   @media (max-width: ${props => props.theme.screen.md}) {
     ${props => props.theme.font_size.large};
   }
@@ -78,6 +84,16 @@ export const Brand = styled.div`
   span {
     margin-left: 20px;
   }
+  @keyframes moveInTop {
+    0% {
+      opacity: 0;
+      transform: translateY(-10rem);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
 `;
 
 export const Mobile = styled.div`

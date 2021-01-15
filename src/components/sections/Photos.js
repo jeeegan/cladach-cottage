@@ -86,16 +86,18 @@ const ImagesGrid = styled.div`
     grid-gap: 24px;
   }
 
-  Img, .img_div  {
+  img,
+  .img_div {
     box-shadow: 3px 3px 3px ${props => props.theme.color.grey.dark};
+
     &:hover {
-    transform: scale(1.1);
-    overflow: auto;
-    border: 5px solid ${props => props.theme.color.primary};
-    box-shadow: none;
+      transform: scale(1.1);
+      overflow: auto;
+      transform: scale(1.05);
+      box-shadow: 3px 3px 3px ${props => props.theme.color.primary};
+      border-radius: 5px;
+    }
   }
-  }
-  
 `;
 
 export default Photos;

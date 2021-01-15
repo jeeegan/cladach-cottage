@@ -27,7 +27,7 @@ const Header = () => (
 );
 
 const HeaderWrapper = styled.header`
-  padding-top: 64px;
+  padding-top: 110px;
 
   .bg-video {
     height: 100%;
@@ -49,6 +49,7 @@ const HeaderWrapper = styled.header`
     position: absolute;
     top: 20vh;
     left: 20vw;
+    animation: moveInLeft 2s;
   }
 
   h1 {
@@ -81,6 +82,22 @@ const HeaderWrapper = styled.header`
   @media (max-width: ${props => props.theme.screen.xs}) {
     h1 {
       ${props => props.theme.font_size.large}
+    }
+  }
+
+  @keyframes moveInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-10rem);
+    }
+  
+    80% {
+      transform: translateX(1rem);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translate(0);
     }
   }
 `;

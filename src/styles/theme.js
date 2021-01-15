@@ -10,7 +10,7 @@ const theme = {
     larger: 'font-size: 32px; line-height: 44px',
     xlarge: 'font-size: 48px; line-height: 56px',
     xxlarge: 'font-size: 72px; line-height: 84px',
-    logo: 'font-size: 36px; line-height: 56px',
+    logo: 'font-size: 96px; line-height: 108px',
   },
   color: {
     white: {

@@ -116,6 +116,10 @@ const Grid = styled.div`
     margin-bottom: 16px;
   }
 
+  Img {
+    border-radius: 5px;
+  }
+
   @media (max-width: ${props => props.theme.screen.md}) {
     grid-template-columns: 2fr 3fr;
     text-align: right;
@@ -150,11 +154,11 @@ const Art = styled.figure`
   max-width: 1000px;
   width: 100%;
   transition: all 0.2s;
-  box-shadow: 5px 5px 5px ${props => props.theme.color.grey.dark};
+  box-shadow: 3px 3px 3px ${props => props.theme.color.grey.dark};
 
   &:hover {
-    transform: scale(1.05);
-    box-shadow: 5px 5px 5px ${props => props.theme.color.primary};
+    transform: scale(1.01);
+    box-shadow: 3px 3px 3px ${props => props.theme.color.primary};
   }
 `;
 
