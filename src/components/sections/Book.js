@@ -17,7 +17,7 @@ const Book = () => (
         method="POST"
         name="contact-form"
         data-netlify="true"
-        action="/thanks"
+        action="/thank-you"
       >
         <div className="field">
           <label htmlFor="name">Name</label>
